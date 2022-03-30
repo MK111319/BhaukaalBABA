@@ -783,7 +783,7 @@ async def _(e):
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await e.client(functions.channels.JoinChannelRequest(channel=bc))
-                await event.edit("🔥🇷 🇺 🇰  🇦 🇾 🇦  🇨 🇭 🇴 🇩  🇰 🇪  💥💥")
+                await event.edit("🇨𝗛𝗟𝗢  🇦𝗣𝗡𝗜   🇲𝗔𝗦𝗧𝗜  🇦 𝗨𝗥  🇺𝗡𝗞𝗜  🇬𝗔𝗔𝗡𝗗  🇩𝗢𝗡𝗢  🇱𝗘𝗞𝗘  🇦𝗧𝗘  🇭 𝗔𝗜 🤤🤤🤤")
             except Exception as e:
                 await event.edit(str(e))   
         else:
@@ -827,7 +827,7 @@ async def _(e):
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await e.client(ImportChatInviteRequest(bc))
-                await event.edit("🇭 ᗩᕼᗩᕼᗩᕼᗩ 🇵 ᖇIᐯᗩTᗴ 🇲 ᗴ 🇨 ᕼᑌᗪᗴᘜI 🇦 ᒍᒍ ❤️‍🔥")
+                await event.edit("🇦 𝗖𝗛𝗔𝗔🤔 🇵𝗥𝗜𝗩𝗔𝗧𝗘  🇲  🇨 𝗛𝗨𝗗𝗘𝗡𝗚𝗘𝗬🤤🤤 🇰𝗜  🇰𝗜𝗦𝗜 🇰 𝗢  🇵 𝗧𝗔  🇳𝗔𝗔  🇨𝗛𝗟𝗘😏😏  🇦𝗖𝗛𝗔𝗔  🇰𝗢𝗜  🇳 𝗔𝗔 🇨 𝗛𝗟𝗢 🇨𝗛𝗟𝗘  🇭𝗔𝗜 👅👅")
             except Exception as e:
                 await event.edit(str(e))   
         else:
@@ -871,7 +871,7 @@ async def _(e):
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await event.client(LeaveChannelRequest(bc))
-                await event.edit("🇧 ᗩᗩᑭ 🇸 ᗴ 🇨 ᕼᑌᗪ 🇬 Yᗴ 🇨 ᕼᑌTIYᗴ🤤🤤")
+                await event.edit("🇸 𝗔𝗔𝗟𝗘 🇾  🇱 𝗔𝗗𝗘𝗡𝗚𝗘𝗬 🇧𝗔𝗔𝗣  🇸  🇦𝗨𝗞𝗔𝗧  🇧 𝗔𝗗𝗛𝗔𝗢\n\n#𝗕𝗔𝗔𝗗𝗦𝗛𝗔𝗛𝗢𝗣♕")
             except Exception as e:
                 await event.edit(str(e))   
         else:
@@ -1330,12 +1330,9 @@ async def _(e):
 @put.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 async def ping(e):
     if e.sender_id in SMEX_USERS:
-        start = datetime.now()
         text = "Σ𝐂𝐇𝐄𝐂𝐊𝐈𝐍𝐆 𝐒𝐏𝐄𝐄𝐃㉺"
         event = await e.reply(text, parse_mode=None, link_preview=None)
-        end = datetime.now()
-        ms = (end - start).microseconds / 1000
-        await event.edit(f"🤤 🇧 🇭 🇦 🇺 🇰 🇦 🇦 🇱 🤤\n\n🤩=⚡️🇧 🇦 🇧 🇦 =͟͟⚡️🤩 sᴘᴀᴍ ϟ `{ms}` ᗰՏ\n💥💥Տᑭᗴᗴᗪ ᑭᗩKKᗩᗪ ᗷᗩᗩᑭ KI ᑕᕼOᗪᗪᗴ💥💥")
+        await event.edit(f"🇵 𝗜𝗡𝗚 🇰𝗬𝗔  🇰𝗔𝗥  🇷𝗛𝗔  🇭𝗔𝗜  🇸 𝗣𝗘𝗘𝗗 🇩𝗘𝗞𝗛𝗡𝗜  🇭𝗔𝗜 🇹𝗢𝗢 🇦𝗜𝗦𝗘 🇧𝗢𝗟  🇳\n\n#𝗕𝗔𝗔𝗗𝗦𝗛𝗔𝗛 𝗢𝗡 𝗙𝗜𝗥𝗘🔥")
 
      
         
@@ -1446,10 +1443,51 @@ async def restart(e):
 async def help(e):
     if e.sender_id in SMEX_USERS:
        text = " ⚔️ ᗷᕼᗩᑌKᗩᗩᒪ ᗷᗩᗷᗩ Տᑭᗩᗰ ⚔️\n\nᑌTIᒪ ᑕOᗰᗰᗩᑎᗪՏ:\n.ping\n.restart\n\nᑌՏᗴᖇᗷOT ᑕOᗰᗰᗩᑎᗪՏ:\n.bio\n.join\n.pjoin\n.leave\n\nՏᑭᗩᗰ ᑕOᗰᗰᗩᑎᗪՏ:\n.spam\n.delayspam\n.bigspam\n.raid\n.replyraid\n.dreplyraid\n\n\nFor more help regarding usage of plugins type plugins name"
-       await e.reply(text, parse_mode=None, link_preview=None )
+       await e.client.send_file(e.chat_id,
+                                      "https://te.legra.ph/file/f46ef5ff0918f8026e78c.jpg",
+                                      caption=text)
+    
 
+        @idk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.alive"))
+
+async def alive(event):
+    if event.sender_id in SMEX_USERS:
+         await event.client.send_file(event.chat_id,
+                                      "https://te.legra.ph/file/f46ef5ff0918f8026e78c.jpg",
+                                      caption="✯ 𝗕𝗮𝗮𝗱𝘀𝗵𝗮𝗵𝗫𝗦𝗽𝗮𝗺 𝗛𝗲𝗿𝗲 ✯",
+                                      buttons=[
+            [
+            Button.url("• ʀᴇᴘᴏ •", "https://github.com/ERR0rMK/BhaukaalBABA")
+            ]
+            ]
+            )
         
-
+        
+        
     
         
 text = """
