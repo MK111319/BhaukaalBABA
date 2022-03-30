@@ -12,7 +12,7 @@ import telethon.utils
 from telethon.tl import functions
 from telethon.tl.functions.channels import LeaveChannelRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
-from Utils import RAID, RRAID
+from Utils import RAID, RRAID, MKX
 from telethon.tl.functions.channels import JoinChannelRequest
 
 a = API_ID
@@ -1100,28 +1100,34 @@ async def spam(e):
             print(message)
             a = await e.client.get_entity(message)
             g = a.id
-            c = a.first_name
-            username = f"[{c}](tg://user?id={g})"
-            counter = int(yukki[0])
-            for _ in range(counter):
-                reply = random.choice(RAID)
-                caption = f"{username} {reply}"
-                async with e.client.action(e.chat_id, "typing"):
-                    await e.client.send_message(e.chat_id, caption)
-                    await asyncio.sleep(0.0)
+            if int(g) in MKX:
+                await e.client.send_message("I can't raid on BhaukaalBaba's owner")
+            else: 
+                c = a.first_name
+                username = f"[{c}](tg://user?id={g})"
+                counter = int(yukki[0])
+                for _ in range(counter):
+                    reply = random.choice(RAID)
+                    caption = f"{username} {reply}"
+                    async with e.client.action(e.chat_id, "typing"):
+                        await e.client.send_message(e.chat_id, caption)
+                        await asyncio.sleep(0.0)
         elif e.reply_to_msg_id:             
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
-            c = b.first_name
-            counter = int(yukki[0])
-            username = f"[{c}](tg://user?id={g})"
-            for _ in range(counter):
-                reply = random.choice(RAID)
-                caption = f"{username} {reply}"
-                async with e.client.action(e.chat_id, "typing"):
-                    await e.client.send_message(e.chat_id, caption)
-                    await asyncio.sleep(0.0)
+            if int(g) in MKX:
+                await e.client.send_message("I can't raid on BhaukaalBaba's owner")
+            else: 
+                c = b.first_name
+                counter = int(yukki[0])
+                username = f"[{c}](tg://user?id={g})"
+                for _ in range(counter):
+                    reply = random.choice(RAID)
+                    caption = f"{username} {reply}"
+                    async with e.client.action(e.chat_id, "typing"):
+                        await e.client.send_message(e.chat_id, caption)
+                        await asyncio.sleep(0.0)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
 
@@ -1210,22 +1216,28 @@ async def _(e):
             message = str(yukki[0])
             a = await e.client.get_entity(message)
             g = a.id
-            que[g] = []
-            qeue = que.get(g)
-            appendable = [g]
-            qeue.append(appendable)
-            text = "ᗩᗷᗷ ᗷᗩᗩᑭ ᒍᏆᏆ ᑕᕼᝪᗞᗴᏀᗩ ᎢᑌᏃᗴ ᗩᗩᒍᗩ ᗷᗴᎢᗩ ᗩᗷᗷ 🔥🥵"
-            await e.reply(text, parse_mode=None, link_preview=None )
+            if int(g) in MKX:
+                await e.client.send_message("I can't raid on BhaukaalBaba's owner")
+            else: 
+                que[g] = []
+                qeue = que.get(g)
+                appendable = [g]
+                qeue.append(appendable)
+                text = "ᗩᗷᗷ ᗷᗩᗩᑭ ᒍᏆᏆ ᑕᕼᝪᗞᗴᏀᗩ ᎢᑌᏃᗴ ᗩᗩᒍᗩ ᗷᗴᎢᗩ ᗩᗷᗷ 🔥🥵"
+                await e.reply(text, parse_mode=None, link_preview=None )
         elif e.reply_to_msg_id:             
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
-            que[g] = []
-            qeue = que.get(g)
-            appendable = [g]
-            qeue.append(appendable)
-            text = "ᗩᗷᗷ ᗷᗩᗩᑭ ᒍᏆᏆ ᑕᕼᝪᗞᗴᏀᗩ ᎢᑌᏃᗴ ᗩᗩᒍᗩ ᗷᗴᎢᗩ ᗩᗷᗷ 🔥🥵"
-            await e.reply(text, parse_mode=None, link_preview=None )
+            if int(g) in MKX:
+                await e.client.send_message("I can't raid on BhaukaalBaba's owner")
+            else: 
+                que[g] = []
+                qeue = que.get(g)
+                appendable = [g]
+                qeue.append(appendable)
+                text = "ᗩᗷᗷ ᗷᗩᗩᑭ ᒍᏆᏆ ᑕᕼᝪᗞᗴᏀᗩ ᎢᑌᏃᗴ ᗩᗩᒍᗩ ᗷᗴᎢᗩ ᗩᗷᗷ 🔥🥵"
+                await e.reply(text, parse_mode=None, link_preview=None )
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
 
